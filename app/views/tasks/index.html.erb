@@ -1,0 +1,9 @@
+<h1> All tasks </h1>
+<% @tasks.each do |task| %>
+	<h5><%= link_to task.title, task_path(task) %> </h5>
+	<% if task.completed %>
+		<p> <i class="far fa-check-square"></i> Task is complete!</p>
+	<% else %>
+		<p> <i class="fal fa-check-square"></i> Task is incomplete!</p>
+	<% end %>
+<% end %>
